@@ -15,6 +15,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CarManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -63,6 +66,7 @@
       <updated>1658288143204</updated>
       <workItem from="1658288156586" duration="21000" />
       <workItem from="1658711141499" duration="5091000" />
+      <workItem from="1659339063941" duration="959000" />
     </task>
     <servers />
   </component>

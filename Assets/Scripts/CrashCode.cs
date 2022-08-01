@@ -21,7 +21,8 @@ public class CrashCode : MonoBehaviour
         Rigidbody[] manparts = collision.gameObject.transform.root.GetComponentsInChildren<Rigidbody>();
         foreach (Rigidbody part in manparts)
         {
-            part.isKinematic = false;
+            //part.isKinematic = false;
+            part.useGravity = true;
         }
     }
 }

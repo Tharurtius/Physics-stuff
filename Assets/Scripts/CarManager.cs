@@ -22,11 +22,11 @@ public class CarManager : MonoBehaviour
         wheelMotor.force = Mathf.Abs(speed * forward);
         if (forward > 0)
         {
-            wheelMotor.targetVelocity = 400;
+            wheelMotor.targetVelocity = 800;
         }
         else if (forward < 0)
         {
-            wheelMotor.targetVelocity = -400;
+            wheelMotor.targetVelocity = -800;
         }
         else
         {
@@ -40,11 +40,11 @@ public class CarManager : MonoBehaviour
         wheelMotor.force = Mathf.Abs(speed * forward);
         if (forward > 0)
         {
-            wheelMotor.targetVelocity = -400;
+            wheelMotor.targetVelocity = -800;
         }
         else if (forward < 0)
         {
-            wheelMotor.targetVelocity = 400;
+            wheelMotor.targetVelocity = 800;
         }
         else
         {

@@ -14,7 +14,7 @@ public class Ragdoll : MonoBehaviour
         
         foreach (Rigidbody part in manparts)
         {
-            part.isKinematic = true;
+            part.useGravity = false;
         }
     }
 
