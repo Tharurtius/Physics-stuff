@@ -6,10 +6,12 @@ using UnityEngine.Animations;
 public class CarManager : MonoBehaviour
 {
     public float speed = 20;
+    HingeJoint[] wheels;
 
     // Start is called before the first frame update
     void Start()
     {
+        wheels = gameObject.GetComponents<HingeJoint>();
     }
 
     // Update is called once per frame
@@ -17,7 +19,6 @@ public class CarManager : MonoBehaviour
     {
         float forward = Input.GetAxis("Vertical");
         //apply vertical axis to back wheels
-        HingeJoint[] wheels = gameObject.GetComponents<HingeJoint>();
         JointMotor wheelMotor = wheels[2].motor;
         wheelMotor.force = Mathf.Abs(speed * forward);
         if (forward > 0)
@@ -72,5 +73,10 @@ public class CarManager : MonoBehaviour
         turn = wheels[1].axis;
         turn.z = 1 * rot;
         wheels[1].axis = turn;
+
+        if (gameObject.transform.position.y <= -5)
+        {
+            Hitpoints.hp = 0;
+        }
     }
 }
