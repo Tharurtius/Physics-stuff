@@ -9,6 +9,7 @@ TagManager:
   - Chassis
   - Wheel
   - Ground
+  - Spawn
   layers:
   - Default
   - TransparentFX

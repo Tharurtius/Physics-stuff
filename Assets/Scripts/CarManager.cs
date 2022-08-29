@@ -17,7 +17,15 @@ public class CarManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float forward = Input.GetAxis("Vertical");
+        float forward;
+        if (GameManager.levelFinished)
+        {
+            forward = 0;
+        }
+        else
+        {
+            forward = Input.GetAxis("Vertical");
+        }
         //apply vertical axis to back wheels
         JointMotor wheelMotor = wheels[2].motor;
         wheelMotor.force = Mathf.Abs(speed * forward);
@@ -64,7 +72,15 @@ public class CarManager : MonoBehaviour
         gameObject.transform.localEulerAngles += rot;
         */
         //turn wheel when button pressed
-        float rot = Input.GetAxis("Horizontal");
+        float rot;
+        if (GameManager.levelFinished)
+        {
+            rot = 0;
+        }
+        else
+        {
+            rot = Input.GetAxis("Horizontal");
+        }
 
         Vector3 turn = wheels[0].axis;
         turn.z = -1 * rot;
@@ -77,6 +93,7 @@ public class CarManager : MonoBehaviour
         if (gameObject.transform.position.y <= -5)
         {
             Hitpoints.hp = 0;
+            transform.position = GameManager.spawn.position;
         }
     }
 }

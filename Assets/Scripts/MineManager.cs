@@ -24,13 +24,13 @@ public class MineManager : MonoBehaviour
         {
             return;//do nothing if touching ground
         }
-        if (collision.transform.tag == "Chassis")
+        else if (collision.transform.tag == "Chassis")
         {
-            Hitpoints.hp -= 10;
+            Hitpoints.hp -= 50;
         }
         else if (collision.transform.tag == "Wheel")
         {
-            Hitpoints.hp -= 5;
+            Hitpoints.hp -= 25;
         }
 
         //physics

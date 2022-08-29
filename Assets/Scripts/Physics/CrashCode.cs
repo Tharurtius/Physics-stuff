@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CrashCode : MonoBehaviour
 {
+    [SerializeField] private GameObject electricity;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +15,7 @@ public class CrashCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -48,7 +50,19 @@ public class CrashCode : MonoBehaviour
         {
             //debug shit
             //Debug.Log(other.transform.name);
-            Hitpoints.hp -= Time.deltaTime;
+            if (!electricity.activeSelf)
+            {
+                electricity.SetActive(true);
+            }
+            Hitpoints.hp -= Time.deltaTime * 5;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (electricity.activeSelf)
+        {
+            electricity.SetActive(false);
         }
     }
 }

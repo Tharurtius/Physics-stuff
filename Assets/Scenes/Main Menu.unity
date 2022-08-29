@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -206,9 +206,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 922109342}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GotoScene
+      - m_Target: {fileID: 1798511120}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: SwapScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -256,6 +256,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36305476}
   m_CullTransparentMesh: 1
+--- !u!1 &174306817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 174306818}
+  m_Layer: 0
+  m_Name: EmptySpawn
+  m_TagString: Spawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &174306818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174306817}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &427761844
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,11 +539,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 659764878}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1798511120}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: SwapScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &659764878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,7 +875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1466150102969203998, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1466150102969203998, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
       propertyPath: m_LocalPosition.x
@@ -875,19 +917,44 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4078722392350979590, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078722392350979590, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078722392350979590, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078722392350979590, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056180668152738271, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335300984788838520, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335300984788838520, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335300984788838520, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335300984788838520, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
---- !u!114 &922109342 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1466150102969203993, guid: acf12c64f95ff2641ae474efd97f1722, type: 3}
-  m_PrefabInstance: {fileID: 922109341}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee879efe88eaa824cad29ab2551eb195, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1116228401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,7 +1239,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 2(Coming Soon)
+  m_Text: Level 2(Unfinished)
 --- !u!222 &1550164786
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1193,6 +1260,7 @@ GameObject:
   - component: {fileID: 1798511118}
   - component: {fileID: 1798511117}
   - component: {fileID: 1798511116}
+  - component: {fileID: 1798511120}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1282,6 +1350,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1798511120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798511115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0279180213f13b47bef5972d8a32603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1826268618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,9 +1445,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 922109342}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GotoScene
+      - m_Target: {fileID: 1798511120}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: SwapScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
