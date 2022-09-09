@@ -10,6 +10,7 @@ TagManager:
   - Wheel
   - Ground
   - Spawn
+  - Mine
   layers:
   - Default
   - TransparentFX

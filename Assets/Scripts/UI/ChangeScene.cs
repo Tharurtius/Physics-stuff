@@ -19,5 +19,7 @@ public class ChangeScene : MonoBehaviour
     public void SwapScene(int scene)
     {
         SceneManager.LoadScene(scene);
+        //reset spawn point
+        GameManager.spawn = null;
     }
 }

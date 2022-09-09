@@ -33,6 +33,11 @@ public class MineManager : MonoBehaviour
             Hitpoints.hp -= 25;
         }
 
+        Explode();
+    }
+
+    public void Explode()
+    {
         //physics
         Explosion.Explode(transform.position);
         //looks

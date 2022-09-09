@@ -94,6 +94,7 @@ public class CarManager : MonoBehaviour
         {
             Hitpoints.hp = 0;
             transform.position = GameManager.spawn.position;
+            GetComponent<Rigidbody>().isKinematic = true;
         }
     }
 }
