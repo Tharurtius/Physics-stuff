@@ -67,6 +67,11 @@ public class GameManager : MonoBehaviour
         //{ //null coalescing
         //    spawn = GameObject.FindWithTag("Spawn")?.transform;//to call objects when null
         //}
+        //a?.property
+        //!null ? null : a.property
+        //
+        //a?[b]
+        //!null ? null : a[b]
     }
 
     public void GotoScene(int scene)
